@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ng_demo1/pages/details_page.dart';
 import 'package:ng_demo1/pages/home_pages.dart';
+import 'package:ng_demo1/pages/settings_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  HomePage(),
+      home: const  HomePage(),
+      routes: {
+        HomePage.id: (context) => HomePage(),
+        DetailsPage.id: (context) => DetailsPage(),
+        SettingsPage.id: (context)=> SettingsPage(),
+     },
     );
   }
 }
